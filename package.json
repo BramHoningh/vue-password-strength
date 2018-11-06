@@ -1,7 +1,7 @@
 {
   "name": "vue-password-strength",
   "description": "A password field with strength indicator for in your Vue projects.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Bram Honingh <bram@pixeldenker.nl>",
   "main": "./dist/DHKPasswordInput.common.js",
   "keywords": [
