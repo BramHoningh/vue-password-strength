@@ -1,3 +1,3 @@
-import DHKPasswordInput from './DHKPasswordInput.vue'
+import VuePasswordStrength from './VuePasswordStrength.vue'
 
-export default DHKPasswordInput
+export default VuePasswordStrength

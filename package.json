@@ -1,7 +1,7 @@
 {
-  "name": "dhk-password-strength-input",
+  "name": "vue-password-strength",
   "description": "A password field with strength indicator for in your Vue projects.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Bram Honingh <bram@pixeldenker.nl>",
   "main": "./dist/DHKPasswordInput.common.js",
   "keywords": [
@@ -14,12 +14,23 @@
     "type": "git",
     "url": "https://github.com/pixeldenker/vue-password-strength"
   },
+  "main": "dist/vue-password-strength.umd.js",
+  "module": "dist/vue-password-strength.esm.js",
+  "unpkg": "dist/vue-password-strength.min.js",
+  "browser": {
+    "./sfc": "src/components/VuePasswordStrength.vue"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name DHKPasswordInput ./src/components/index.js"
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-password-strength.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-password-strength.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-password-strength.min.js"
   },
   "dependencies": {
+    "rollup": "^0.67.0",
+    "rollup-plugin-buble": "^0.19.4",
+    "rollup-plugin-vue": "^4.3.2",
     "vue": "^2.5.16",
     "zxcvbn": "^4.4.2"
   },

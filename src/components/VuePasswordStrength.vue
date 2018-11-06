@@ -1,18 +1,18 @@
 <template>
 <div :class="inputGroupClass">
   <div :class="aboveInputClass">
-    <label :class="labelClass" :for="id">{{labelText}}}</label>
+    <label :class="labelClass" :for="id">{{labelText}}</label>
     <div :class="passwordStrengthClass">
       <div :class="[passwordStrengthInnerClass, getScoreColorClass]"
         :style="{'width': getWidthByScore}"
       ></div>
     </div>
   </div>
-  <input 
-    :id="id" 
+  <input
+    :id="id"
     :class="inputClass"
-    :type="type" 
-    :placeholder="placeholder" 
+    :type="type"
+    :placeholder="placeholder"
     :value="value"
     :required="required"
     v-model="password"
@@ -126,7 +126,7 @@ export default {
       default: 'dhk-password-strength-container'
     },
     /**
-    * CSS Classname for password strength indicator 
+    * CSS Classname for password strength indicator
     * inner div element (this div displays the color).
     * Default is 'dhk-password-strength-inner'.
     * @type {String}
@@ -176,12 +176,12 @@ export default {
       if (calculation.feedback.warning || calculation.feedback.suggestions.length) {
         this.$emit('feedback', calculation.feedback)
       }
-    } 
+    }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .dhk-password-input {
   min-width: 250px;
   max-width: 400px;

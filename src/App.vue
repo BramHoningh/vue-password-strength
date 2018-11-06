@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <DHKPasswordInput />
+    <VuePasswordStrength />
   </div>
 </template>
 
 <script>
-import DHKPasswordInput from './components/DHKPasswordInput'
+import VuePasswordStrength from './components/VuePasswordStrength'
 
 export default {
   name: 'app',
   components: {
-    DHKPasswordInput
+      VuePasswordStrength
   },
 }
 </script>
